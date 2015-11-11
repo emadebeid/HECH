@@ -17,8 +17,8 @@ log.setLevel(logging.DEBUG)
 # Valid indicator values
 HIGH = "high" # Price is high
 LOW = "low" # Price is low
-Green = "green" # Green Color
-Red = "red" # Red Color
+GREEN = "green" # Green Color
+RED = "red" # Red Color
 NONE = "none" # Price is unspecified, server is reachable
 NA = "na" # Price is not available, server cannot be reached. 
 UNKNOWN = None # Initialisation value, server connection has not been attempted
@@ -26,7 +26,7 @@ GSLOW = "gslow" # green slow blinking
 GFAST = "gfast" # green fast blinking
 RSLOW = "rslow" # red slow blinking
 RFAST = "rfast" # red fast blinking
-IND_GOOD = {HIGH, LOW, NONE, GSLOW, GFAST, RSLOW, RFAST}
+IND_GOOD = {HIGH, LOW, NONE, GSLOW, GFAST, RSLOW, RFAST, RED, GREEN}
 IND_ALL = IND_GOOD.union({NA, UNKNOWN})
     
 class RPiLED(object):
@@ -65,10 +65,14 @@ Author: Egon Kidmose"""
 
     def set_led(self, indicator):
         """Sets the RGB LED according to an indicator value"""
-        if indicator == HIGH or RED:
+        if indicator == HIGH or indicator == RED:
             log.info("High indicator, red.")
             self._led.set([1, 0, 0])
+<<<<<<< HEAD
         elif indicator == LOW or Green:
+=======
+        elif indicator == LOW or indicator == GREEN:
+>>>>>>> origin/develop
             log.info("Low indicator, green.")
             self._led.set([0, 1, 0]) 
         elif indicator == NONE:
