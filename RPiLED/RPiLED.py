@@ -68,7 +68,11 @@ Author: Egon Kidmose"""
         if indicator == HIGH or indicator == RED:
             log.info("High indicator, red.")
             self._led.set([1, 0, 0])
+<<<<<<< HEAD
+        elif indicator == LOW or Green:
+=======
         elif indicator == LOW or indicator == GREEN:
+>>>>>>> origin/develop
             log.info("Low indicator, green.")
             self._led.set([0, 1, 0]) 
         elif indicator == NONE:
