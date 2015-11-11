@@ -43,7 +43,10 @@ It is assumed that:
 
 The setup process consist of the following steps:
 
-1. Install dependencies:
+1. Upadate the packages
+		
+		pi@raspberrypi ~ $ sudo apt-get update --fix-missing
+2. Install dependencies:
 
 		pi@raspberrypi ~ $ sudo apt-get install git python python-pip python-dev
 
@@ -66,7 +69,7 @@ The setup process consist of the following steps:
 
 	Example:
 	
-		@reboot /home/pi/hech/RPiLED/RPiLED.py --period 5 --url http://radagast4.netlab.eng.au.dk/led/ --pins 20,21,26
+		@reboot python /home/pi/HECH/RPiLED/RPiLED.py --period 5 --url http://10.24.15.144/LED_Color.txt --pins 20,21,26
 
 	For logging use:
 
