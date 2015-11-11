@@ -49,7 +49,7 @@ The setup process consist of the following steps:
 
 2. Obtain source:
 
-		pi@raspberrypi ~ $ git clone https://bitbucket.org/smarthg/hech.git
+		pi@raspberrypi ~ $ git clone https://github.com/eGuard/HECH.git
 
 3. Install python requirements: 
 
