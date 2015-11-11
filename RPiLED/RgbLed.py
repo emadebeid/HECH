@@ -69,7 +69,7 @@ class RgbLed(object):
                 else:
                     PWM.add_channel_pulse(PWM_DMA, pin, timing_offset, PWM_PRD/PWM_RES-1) 
             else:
-                PWM.add_channel_pulse(PWM_DMA, pin, timing_offset, 0) 
+                PWM.add_channel_pulse(PWM_DMA, pin, timing_offset, PWM_PRD/PWM_RES-1) 
             timing_offset = timing_offset +1
 
 def main(argv):

@@ -17,6 +17,8 @@ log.setLevel(logging.DEBUG)
 # Valid indicator values
 HIGH = "high" # Price is high
 LOW = "low" # Price is low
+Green = "green" # Green Color
+Red = "red" # Red Color
 NONE = "none" # Price is unspecified, server is reachable
 NA = "na" # Price is not available, server cannot be reached. 
 UNKNOWN = None # Initialisation value, server connection has not been attempted
@@ -63,10 +65,10 @@ Author: Egon Kidmose"""
 
     def set_led(self, indicator):
         """Sets the RGB LED according to an indicator value"""
-        if indicator == HIGH:
+        if indicator == HIGH or RED:
             log.info("High indicator, red.")
             self._led.set([1, 0, 0])
-        elif indicator == LOW:
+        elif indicator == LOW Or Green:
             log.info("Low indicator, green.")
             self._led.set([0, 1, 0]) 
         elif indicator == NONE:
