@@ -30,9 +30,7 @@ IND_GOOD = {HIGH, LOW, NONE, GSLOW, GFAST, RSLOW, RFAST, RED, GREEN}
 IND_ALL = IND_GOOD.union({NA, UNKNOWN})
     
 class RPiLED(object):
-    """Polls an URL for DAPP price indicator and sets a RGB LED accordingly.
 
-Author: Egon Kidmose"""
 
     def __init__(self, led, url):
         """Initialises an instance off the class
