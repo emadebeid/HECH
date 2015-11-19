@@ -18,8 +18,6 @@ PWM_DMA = 0 # channels for each pin (0-14)
 PWM_DMA1 = 1 # channels for each pin (0-14)
 
 class RgbLed(object):
-    """A RGB LED that can be set to: off, on or blinking in either of the colors red, green or blue
-    Author: Egon Kidmose""" 
 
     def __init__(self, pins):
         """Pin configuration. 
