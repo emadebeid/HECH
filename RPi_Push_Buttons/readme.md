@@ -10,11 +10,9 @@ Connect the switches to a GPIO pin and use the RPi.GPIO library in your Python p
 
 In our Pi, right switch is connected with GPIO 23 and left switch is connected with GPIO 22.
 
-![](./media/image1.png)
-
 Open an editor (nano or IDLE) and paste in the following code. As with all the program examples in this book, you can also download the program from the Code section of the [*Raspberry Pi Cookbook* website](http://www.raspberrypicookbook.com/), where it is called *switch.py*.
 
-This example code displays a message when the button is pressed and turn on Red if the right button is pressed and turn on green if the left button is pressed. Moreover, it stores the LED color in a RPi web server **http://10.24.15.144/LED\_Color.txt**:
+This example code displays a message when the button is pressed and turn on Red if the right button is pressed and turn on green if the left button is pressed. Moreover, it stores the LED color in a RPi web server **http://10.24.15.144/LED_Color.txt**:
 
 	import RPi.GPIO as GPIO
 	import time
@@ -54,7 +52,7 @@ This example code displays a message when the button is pressed and turn on Red 
 
 You will need to run the program as superuser:
 
-> pi@raspberrypi ~ $ sudo python push.py
+> pi@raspberrypi ~ $ sudo python push_buttons.py
 >
 > Right Button Pressed
 >
